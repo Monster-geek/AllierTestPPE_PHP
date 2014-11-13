@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3dbf440-f461-4e22-8ce6-fce742593e92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/questionnaires.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saisir_questionnaire.php" afterPath="$PROJECT_DIR$/saisir_questionnaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saisir_questions.php" afterPath="$PROJECT_DIR$/saisir_questions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traiter_questionnaire.php" afterPath="$PROJECT_DIR$/traiter_questionnaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traiter_questions.php" afterPath="$PROJECT_DIR$/traiter_questions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/creer_XML.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen_XML.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AllierTestPPE_PHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="saisir_questionnaire.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saisir_questionnaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="6" selection-start="808" selection-end="808" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="720">
+            <state line="17" column="22" selection-start="476" selection-end="476" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -41,7 +39,7 @@
       <file leaf-file-name="saisir_questions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saisir_questions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="10" selection-start="1330" selection-end="1330" vertical-scroll-proportion="-21.333334" vertical-offset="90" max-vertical-offset="2160">
+            <state line="60" column="67" selection-start="1922" selection-end="1969" vertical-scroll-proportion="-12.703704" vertical-offset="737" max-vertical-offset="2160">
               <folding />
             </state>
           </provider>
@@ -59,19 +57,55 @@
       <file leaf-file-name="traiter_questionnaire.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/traiter_questionnaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="42" selection-start="1095" selection-end="1095" vertical-scroll-proportion="1.5185186" vertical-offset="707" max-vertical-offset="2016">
+            <state line="37" column="42" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-22.666666" vertical-offset="0" max-vertical-offset="1962">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traiter_questions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traiter_questions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="4" selection-start="2160" selection-end="2160" vertical-scroll-proportion="-37.333332" vertical-offset="162" max-vertical-offset="2520">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="creer_XML.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/creer_XML.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.071633235" vertical-offset="184" max-vertical-offset="882">
               <folding>
-                <element signature="e#10#42#0" expanded="true" />
+                <element signature="e#6#89#0" expanded="true" />
+                <marker date="1415894099398" expanded="true" signature="260:630" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="260:958" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="271:421" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="433:630" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="485:938" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="485:938" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="485:630" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="508:800" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="508:630" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="609:776" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="609:630" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="847:922" placeholder="..." />
+                <marker date="1415894099398" expanded="true" signature="847:922" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="traiter_questions.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/traiter_questions.php">
+      <file leaf-file-name="gen_XML.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen_XML.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="0" selection-start="3855" selection-end="3855" vertical-scroll-proportion="0.95174265" vertical-offset="1702" max-vertical-offset="2520">
-              <folding />
+            <state line="50" column="81" selection-start="1152" selection-end="1152" vertical-scroll-proportion="-14.592592" vertical-offset="326" max-vertical-offset="1260">
+              <folding>
+                <element signature="e#112#291#0" expanded="false" />
+                <element signature="e#1610#1720#0" expanded="false" />
+                <element signature="n#connexion_DB#0;n#gen_XML#0;n#!!top" expanded="false" />
+                <marker date="1415894099402" expanded="true" signature="1180:1217" placeholder="SELECT displ..Questionnaire..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,15 +128,17 @@
         <option value="$PROJECT_DIR$/saisir_questions.php" />
         <option value="$PROJECT_DIR$/traiter_questionnaire.php" />
         <option value="$PROJECT_DIR$/traiter_questions.php" />
+        <option value="$PROJECT_DIR$/gen_XML.php" />
+        <option value="$PROJECT_DIR$/creer_XML.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="1600" />
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1600" />
-    <option name="height" value="904" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -148,68 +184,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllierTestPPE_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllierTestPPE_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fourni de base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllierTestPPE_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllierTestPPE_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fourni de base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="On fourni" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Saisir QCM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllierTestPPE_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AllierTestPPE_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fourni de base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="On fourni" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exemple fichier XML extrait et à lire" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -234,6 +208,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1074" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FullScreen" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -254,9 +229,32 @@
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e3dbf440-f461-4e22-8ce6-fce742593e92" name="Default" comment="" />
@@ -266,15 +264,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="-4" width="1600" height="904" extended-state="6" />
+    <frame x="1600" y="24" width="1600" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12870012" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16602316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -282,11 +280,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -308,7 +306,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/saisir_questionnaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="6" selection-start="808" selection-end="808" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="720">
+        <state line="22" column="6" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saisir_questions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="10" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="2160">
           <folding />
         </state>
       </provider>
@@ -320,26 +325,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saisir_questions.php">
+    <entry file="file://$PROJECT_DIR$/traiter_questionnaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="10" selection-start="1330" selection-end="1330" vertical-scroll-proportion="-21.333334" vertical-offset="90" max-vertical-offset="2160">
+        <state line="37" column="42" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="707" max-vertical-offset="2016">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traiter_questions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="0" selection-start="3855" selection-end="3855" vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2520">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traiter_questionnaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="42" selection-start="1095" selection-end="1095" vertical-scroll-proportion="1.5185186" vertical-offset="707" max-vertical-offset="2016">
-          <folding>
-            <element signature="e#10#42#0" expanded="true" />
-          </folding>
+        <state line="37" column="42" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-22.666666" vertical-offset="0" max-vertical-offset="1962">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/questionnaires.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="1" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0" vertical-offset="523" max-vertical-offset="1368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saisir_questionnaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="476" selection-end="476" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saisir_questions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="67" selection-start="1922" selection-end="1969" vertical-scroll-proportion="-12.703704" vertical-offset="737" max-vertical-offset="2160">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/traiter_questions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="0" selection-start="3855" selection-end="3855" vertical-scroll-proportion="0.95174265" vertical-offset="1702" max-vertical-offset="2520">
+        <state line="65" column="4" selection-start="2160" selection-end="2160" vertical-scroll-proportion="-37.333332" vertical-offset="162" max-vertical-offset="2520">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen_XML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="81" selection-start="1152" selection-end="1152" vertical-scroll-proportion="-14.592592" vertical-offset="326" max-vertical-offset="1260">
+          <folding>
+            <element signature="e#112#291#0" expanded="false" />
+            <element signature="e#1610#1720#0" expanded="false" />
+            <element signature="n#connexion_DB#0;n#gen_XML#0;n#!!top" expanded="false" />
+            <marker date="1415894099402" expanded="true" signature="1180:1217" placeholder="SELECT displ..Questionnaire..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/creer_XML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.071633235" vertical-offset="184" max-vertical-offset="882">
+          <folding>
+            <element signature="e#6#89#0" expanded="true" />
+            <marker date="1415894099398" expanded="true" signature="260:630" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="260:958" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="271:421" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="433:630" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="485:938" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="485:938" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="485:630" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="508:800" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="508:630" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="609:776" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="609:630" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="847:922" placeholder="..." />
+            <marker date="1415894099398" expanded="true" signature="847:922" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
