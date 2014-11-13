@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<questionnaire cle='110725122613' name='Gouts' displayName='Questionnaire sur les gouts'>
+<description></description>
+	<question type='combo' name='Fruits'>
+		<text>Quel fruit est rond et de couleur orange ?</text>
+		<reponses>
+			<reponse default ='true'>Banane</reponse>
+			<reponse default ='false'>Pomme</reponse>
+			<reponse default ='false'>Orange</reponse>
+			<reponse default ='false'>Raisin</reponse>
+			<reponse default ='false'>Fraise</reponse>
+		</reponses>
+	</question>
+	<question type='text' name='Musique'>
+		<text>Quel genre de musique aimez-vous ?</text>
+		<defaultreponse>Rock</defaultreponse>
+		<maxCharacters>75</maxCharacters>
+	</question>
+	<question type='liste' name='Soupes'>
+		<text>Quelles sont les soupes que vous aimez ?</text>
+		<reponses>
+			<reponse default ='true'>Soupe aux vermicelles</reponse>
+			<reponse default ='false'>Soupe de tomate</reponse>
+			<reponse default ='false'>Soupe de legume</reponse>
+		</reponses>
+	</question>
+	<question type='radio' name='Sexe'>
+		<text>Quel est votre sexe ?</text>
+		<reponses>
+			<reponse default ='true'>Masculin</reponse>
+			<reponse default ='false'>Feminin</reponse>
+		</reponses>
+	</question>
+</questionnaire>
