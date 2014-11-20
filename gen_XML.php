@@ -95,15 +95,13 @@ class gen_XML {
             return "Erreur critique lors de l'intérrogation de la base de données.";
         }
 
-        // TODO : DEBUG THIS !! Only one row is displayed
-        //
-
         while( $tab_quest = $exec->fetch_array())
         {
             $tab_row[] = $tab_quest;
         }
+
         foreach ($tab_row as $row){
-            $resultat = '<option value="'.$row[1].'">'.$row[0].'</option>';
+            $resultat = $resultat.'<option value="'.$row[1].'">'.$row[0].'</option>';
         }
 
 
