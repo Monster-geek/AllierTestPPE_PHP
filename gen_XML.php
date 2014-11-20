@@ -9,10 +9,10 @@
 class gen_XML {
 
     /**
-     * @var $user = Identifiant MySQL
-     * @var $pwd = Mot de passe MySQL
+     * @var $user = Identifiant mysqli
+     * @var $pwd = Mot de passe mysqli
      * @var $bdd = Nom de la base a interroger
-     * @var $hote = Adresse du serveur MySQL
+     * @var $hote = Adresse du serveur mysqli
      */
     private $user = "root";
     private $pwd = "";
@@ -20,53 +20,94 @@ class gen_XML {
     private $hote="localhost";
 
     /**
-     * @param $name_quest = Nom du questionnaire a générer
-     *
-     * return = Tableau de données pour la génération du XML
+     * @param $key_quest = Clé du questionnaire
+     * @return array|bool = retourne un tableau avec les questions lié au questionnaire demandé | FALSE en cas de vide
      */
-    public function GetData( $name_quest ){
+    protected function GetData( $key_quest ){
+
+        $mysqli = $this->connexion_DB();
+
+        $req = 'SELECT rang , typeQ , questions.name , text , reponse1 , reponse2 ,reponse3 ,reponse4 ,reponse5 ,defaut
+                FROM questions
+                WHERE '.$key_quest.' = cle
+                ';
+
+        $exec = $mysqli->query($req);
+
+        $tab_row = NULL;
+        while ($tab_req = $exec->fetch_array()){
+            $tab_row[] = $tab_req;
+        }
+
+        if($tab_row == NULL){
+            $tab_row = FALSE;
+        }
+
+        $mysqli->close();
+        return $tab_row;
 
     }
 
+
     /**
-     * @param $data = Tableau de donnée pour la génération du XML
-     * @param $name_file = nom du fichier XML
+     * @param $key_file = clé du fichier XML
      *
      * return = callable du fichier XML
      */
-    public function gen_to_xml( $data , $name_file ){
+    public function gen_to_xml( $key_file){
 
+        //Get data from BDD
+        $data = $this->GetData($key_file);
+
+        if($data == FALSE){
+
+        }
+
+        //Building XML file
+        $callable = $this->build_xml_file($data , $key_file);
+
+        //Building message on the succes of the build
+        //$this->gen_display_bloc($res_build , $build_responce , $callable);
     }
 
     /**
      * @return string = Liste des questionnnaire prete a etre afficher.
      */
-    public function get_list_quest(){
+    public function get_list_quest () {
 
         $resultat = "" ;
 
-        $cnx = $this->connexion_DB();
+        $mysqli = $this->connexion_DB();
 
-        if (($cnx == FALSE) || ($cnx == NULL)){
+        if ($mysqli->connect_errno){
+
+            $mysqli->close();
             return "Erreur critique lors de la connection a la base de données.";
         }
 
-        $req = "SELECT displayName FROM Questionnaire";
+        $req = "SELECT displayName , cle FROM Questionnaire";
 
-        $exec = mysql_query($req , $cnx);
+        $exec = $mysqli->query($req);
 
         if (($exec == FALSE) || ($exec == NULL)){
+
+            $mysqli->close();
             return "Erreur critique lors de l'intérrogation de la base de données.";
         }
 
-        $tab_quest = mysql_fetch_array($exec);
+        // TODO : DEBUG THIS !! Only one row is displayed
+        //
 
-        foreach ($tab_quest as $r){
-
-            $resultat = "<option value=\".$r.\">".$r."</option>";
-
+        while( $tab_quest = $exec->fetch_array())
+        {
+            $tab_row[] = $tab_quest;
+        }
+        foreach ($tab_row as $row){
+            $resultat = '<option value="'.$row[1].'">'.$row[0].'</option>';
         }
 
+
+        $mysqli->close();
         return $resultat;
     }
 
@@ -74,22 +115,74 @@ class gen_XML {
      * @return bool|resource = retourne FALSE en cas d'erreur sinon retoune le jeton de connection
      */
     private function connexion_DB(){
-        $cnx = mysql_connect($this->$hote, $this->$user,$this->$pwd);
+        $mysqli = new mysqli($this->hote, $this->user, $this->pwd, $this->bdd);
 
-        if ( !$cnx )
+        if ( $mysqli->connect_errno )
         {
-            mysql_close($cnx);
+            $mysqli->close();
             return false;
         }
 
-        $labd=mysql_select_db($this->$bdd,$cnx);
+        return $mysqli;
+    }
 
-        if ( !$labd )
-        {
-            mysql_close($cnx);
-            return false;
+    /**
+     * @param $data
+     */
+    private function build_xml_file($data , $key){
+
+        /**
+        * Recup d'info basique
+        */
+        $mysqli = $this->connexion_DB();
+        $req = 'SELECT displayName , questionnaire.name ,description  FROM questionnaire WHERE '.$key.' = cle';
+        $exec = $mysqli->query($req);
+        $tab_info = $exec->fetch_array();
+        $display_name = $tab_info[0];
+        $name = $tab_info[1];
+        $descrip = $tab_info[2];
+
+
+
+        // HEAD
+        $xml = domxml_new_doc("1.0");
+        $root = $xml->create_element("questionnaire");
+        $root->set_attribute("cle",$key);
+        $root->set_attribute("name",$name);
+        $root->set_attribute("displayName",$display_name);
+        $root = $xml->append_child($root);
+
+        //Descrip
+        $desc = $xml->create_element("description");
+        $desc = $root->append_child($desc);
+        $text_desc = $xml->create_text_node($descrip);
+        $text_desc = $desc->append_child($text_desc);
+
+
+        foreach($data as $row){
+            $tab_quest[] = $row;
+        }
+        foreach($tab_quest as $row){
+
         }
 
-        return $cnx;
+
+    }
+
+    private function gen_display_bloc($res_build , $msg , $callable)
+    {
+
+        if ($res_build)     // Build = OK
+        {
+            $html = "<fieldset>";
+            $html = $html."<legend> Generation réussie !</legend>";
+            $html = $html."</fieldset>";
+        }
+        else                //Build = FAIL
+        {
+            $html = "<fieldset>";
+            $html = $html."<legend> Echec de la génération du fichier !</legend>";
+            $html = $html."</fieldset>";
+        }
     }
 } 

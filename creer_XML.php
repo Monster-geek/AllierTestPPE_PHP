@@ -30,6 +30,7 @@
                         $list = $gen->get_list_quest();
                         echo $list;
                     ?>
+
                 </select>
             </fieldset>
 
@@ -39,6 +40,14 @@
                 <input type="submit" value="Creer XML" />
             </P>
         </form>
+
+        <br />
+
+        <?php
+
+            // Contenue généré selon la réusite ou non du build
+
+        ?>
     </body>
 
 </HTML>
