@@ -50,9 +50,9 @@ class gen_XML {
 
 
     /**
-     * @param $key_file = clé du fichier XML
+     * @param $key_file = Clé du questionnaire
      *
-     * return = callable du fichier XML
+     * @return string = Code HTML a afficher
      */
     public function gen_to_xml( $key_file){
 
@@ -66,8 +66,20 @@ class gen_XML {
         //Building XML file
         $callable = $this->build_xml_file($data , $key_file);
 
+        if ($callable == FALSE)
+        {
+            $res_build = FALSE;
+        }
+        else
+        {
+            $res_build = TRUE;
+        }
+
         //Building message on the succes of the build
-        //$this->gen_display_bloc($res_build , $build_responce , $callable);
+        $display_result = $this->gen_display_bloc($res_build  , $callable);
+
+       //return
+        echo $display_result;
     }
 
     /**
@@ -125,7 +137,10 @@ class gen_XML {
     }
 
     /**
-     * @param $data
+     * @param $data = Tableau de donnée extrait de la BDD
+     * @param $key = ID du questionnaire
+     *
+     * @return string|bool = en cas de succes retourne le callable, sinon renvoie FALSE.
      */
     private function build_xml_file($data , $key){
 
@@ -140,40 +155,150 @@ class gen_XML {
         $name = $tab_info[1];
         $descrip = $tab_info[2];
 
-
-
-        // HEAD
-        $xml = domxml_new_doc("1.0");
-        $root = $xml->create_element("questionnaire");
-        $root->set_attribute("cle",$key);
-        $root->set_attribute("name",$name);
-        $root->set_attribute("displayName",$display_name);
-        $root = $xml->append_child($root);
+        /**
+         * Head of XML
+         */
+        $xml = new DOMDocument('1.0','iso-8859-1');
+        $root = $xml->createElement("questionnaire");
+        $root->setAttribute("cle",$key);
+        $root->setAttribute("name",$name);
+        $root->setAttribute("displayName",$display_name);
+        $root = $xml->appendChild($root);
 
         //Descrip
-        $desc = $xml->create_element("description");
-        $desc = $root->append_child($desc);
-        $text_desc = $xml->create_text_node($descrip);
-        $text_desc = $desc->append_child($text_desc);
+        $desc = $xml->createElement("description");
+        $desc = $root->appendChild($desc);
+        $text_desc = $xml->createTextNode($descrip);
+        $text_desc = $desc->appendChild($text_desc);
 
 
+        // Split if multiple responses
         foreach($data as $row){
             $tab_quest[] = $row;
         }
+        // Reponces
         foreach($tab_quest as $row){
 
+            $question = $xml->createElement("question");
+            $question->setAttribute("type",$row[1]);
+            $question->setAttribute("name",$row[2]);
+            $question = $root->appendChild($question);
+
+            $quest = $xml->createElement("text");
+            $question->appendChild($quest);
+            $quest_text = $xml->createTextNode($row[3]);
+            $quest->appendChild($quest_text);
+
+            $block_responce = $xml->createElement("reponses");
+            $block_responce = $question->appendChild($block_responce);
+
+            if($row[4] != "vide")
+            {
+                $rep = "";
+                $rep = $xml->createElement("reponse");
+                if ($row[9] == 1)
+                {
+                    $rep->setAttribute("default", "true");
+                }
+                else
+                {
+                    $rep->setAttribute("default", "false");
+                }
+
+                $rep_text = $xml->createTextNode($row[4]);
+                $rep->appendChild($rep_text);
+                $block_responce->appendChild($rep);
+            }
+            if($row[5] != "vide")
+            {
+                $rep = "";
+                $rep = $xml->createElement("reponse");
+                if ($row[9] == 2)
+                {
+                    $rep->setAttribute("default", "true");
+                }
+                else
+                {
+                    $rep->setAttribute("default", "false");
+                }
+
+                $rep_text = $xml->createTextNode($row[5]);
+                $rep->appendChild($rep_text);
+                $block_responce->appendChild($rep);
+            }
+            if($row[6] != "vide")
+            {
+                $rep = "";
+                $rep = $xml->createElement("reponse");
+                if ($row[9] == 3)
+                {
+                    $rep->setAttribute("default", "true");
+                }
+                else
+                {
+                    $rep->setAttribute("default", "false");
+                }
+
+                $rep_text = $xml->createTextNode($row[6]);
+                $rep->appendChild($rep_text);
+                $block_responce->appendChild($rep);
+            }
+            if($row[7] != "vide")
+            {
+                $rep = "";
+                $rep = $xml->createElement("reponse");
+                if ($row[9] == 4)
+                {
+                    $rep->setAttribute("default", "true");
+                }
+                else
+                {
+                    $rep->setAttribute("default", "false");
+                }
+
+                $rep_text = $xml->createTextNode($row[7]);
+                $rep->appendChild($rep_text);
+                $block_responce->appendChild($rep);
+            }
+            if($row[8] != "vide")
+            {
+                $rep = "";
+                $rep = $xml->createElement("reponse");
+                if ($row[9] == 5)
+                {
+                    $rep->setAttribute("default", "true");
+                }
+                else
+                {
+                    $rep->setAttribute("default", "false");
+                }
+
+                $rep_text = $xml->createTextNode($row[8]);
+                $rep->appendChild($rep_text);
+                $block_responce->appendChild($rep);
+            }
         }
 
-
+        //write it on server and return the callable
+        $xml->save("test.xml");
+        $callable = "test.xml";
+        return $callable;
     }
 
-    private function gen_display_bloc($res_build , $msg , $callable)
+    /**
+     * @param $res_build bool = resultat du build du fichier
+     * @param $callable = path callable du fichier
+     *
+     * @return string = code HTML pret a afficher
+     */
+    private function gen_display_bloc($res_build , $callable)
     {
 
         if ($res_build)     // Build = OK
         {
             $html = "<fieldset>";
             $html = $html."<legend> Generation réussie !</legend>";
+            $html = $html."Path callable = ".$callable;
             $html = $html."</fieldset>";
         }
         else                //Build = FAIL
@@ -182,5 +307,7 @@ class gen_XML {
             $html = $html."<legend> Echec de la génération du fichier !</legend>";
             $html = $html."</fieldset>";
         }
+
+        return $html;
     }
 } 
