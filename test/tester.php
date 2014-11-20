@@ -10,9 +10,12 @@
      */
 
     //$data = $gen->GetData( 12064011927 );
-
     //var_dump($data);
 
-    $gen->gen_to_xml(141120122739);
+    /**
+     *  Test gen_to_xml()
+     */
+    //$gen->gen_to_xml(12064011927);
+
 
 ?>

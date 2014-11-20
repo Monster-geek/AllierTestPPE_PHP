@@ -13,12 +13,25 @@
     }
 
     $gen = new gen_XML();
+
+    if (isset($_POST['gen_xml']))
+    {
+        $callable = $_POST['gen_xml'];
+
+        $doc = new DOMDocument();
+        $doc->load($callable);
+        echo $doc;
+        die();
+    }
+
 ?>
 
 <HTML>
     <head>
         <title>Générer un questionnaire au format XML</title>
         <link rel="stylesheet" href="questionnaires.css" type="text/css" />
+        <script src="./js/libs/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
     </head>
 
     <body>
@@ -45,9 +58,20 @@
 
         <?php
 
-            // Contenue généré selon la réusite ou non du build
+            if (isset($_POST['type']))
+            {
+                $key = $_POST['type'];
+                $bloc_gen = $gen->gen_to_xml($key);
+                echo $bloc_gen;
+            }
 
         ?>
+
+    <div id="bloc_display_xml">
+        <fieldset id="bloc_affichage_xml" style="display: none">
+
+        </fieldset>
+    </div>
     </body>
 
 </HTML>

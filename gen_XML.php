@@ -60,7 +60,7 @@ class gen_XML {
         $data = $this->GetData($key_file);
 
         if($data == FALSE){
-
+            return 'Erreur de récupérations des données.';
         }
 
         //Building XML file
@@ -78,8 +78,8 @@ class gen_XML {
         //Building message on the succes of the build
         $display_result = $this->gen_display_bloc($res_build  , $callable);
 
-       //return
-        echo $display_result;
+        //Return the final code
+        return $display_result;
     }
 
     /**
@@ -159,6 +159,8 @@ class gen_XML {
          * Head of XML
          */
         $xml = new DOMDocument('1.0','iso-8859-1');
+        $xml->preserveWhiteSpace= false;
+        $xml->formatOutput= true;
         $root = $xml->createElement("questionnaire");
         $root->setAttribute("cle",$key);
         $root->setAttribute("name",$name);
@@ -166,11 +168,14 @@ class gen_XML {
         $root = $xml->appendChild($root);
 
         //Descrip
+
         $desc = $xml->createElement("description");
         $desc = $root->appendChild($desc);
-        $text_desc = $xml->createTextNode($descrip);
-        $text_desc = $desc->appendChild($text_desc);
 
+        if($descrip != "vide"){
+            $text_desc = $xml->createTextNode($descrip);
+            $text_desc = $desc->appendChild($text_desc);
+        }
 
         // Split if multiple responses
         foreach($data as $row){
@@ -279,9 +284,13 @@ class gen_XML {
             }
         }
 
+        // Build the name (name of the questionnaire + yymmddhhmmss)
+        $cle = time();
+        $cle = date("ymjhis",$cle);
+        $callable = $name.$cle.".xml";
+
         //write it on server and return the callable
-        $xml->save("test.xml");
-        $callable = "test.xml";
+        $xml->save("./xml/".$callable);
         return $callable;
     }
 
@@ -296,15 +305,17 @@ class gen_XML {
 
         if ($res_build)     // Build = OK
         {
+
             $html = "<fieldset>";
             $html = $html."<legend> Generation réussie !</legend>";
-            $html = $html."Path callable = ".$callable;
+            $html = $html."Afficher le XML. <input type ='button' id='button_display_xml' value=".$callable." >";
             $html = $html."</fieldset>";
         }
         else                //Build = FAIL
         {
             $html = "<fieldset>";
             $html = $html."<legend> Echec de la génération du fichier !</legend>";
+            $html = $html."Une erreur dans la génération du fichier XML est survenue !";
             $html = $html."</fieldset>";
         }
 
