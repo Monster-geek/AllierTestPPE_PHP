@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire cle="12064011927" name="Gouts" displayName="Questionnaire sur les gouts">
+  <description/>
+  <question type="combo" name="Fruits">
+    <text>Quel fruit est rond et de couleur orange ?</text>
+    <reponses>
+      <reponse default="true">Banane</reponse>
+      <reponse default="false">Pomme</reponse>
+      <reponse default="false">Orange</reponse>
+      <reponse default="false">Raisin</reponse>
+      <reponse default="false">Fraise</reponse>
+    </reponses>
+  </question>
+</questionnaire>
